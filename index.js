@@ -1,2 +1,7 @@
 const url = 'https://openlibrary.org/dev/docs/api/books';
-console.log(url)
+
+fetch(url);
+    .then((res) => res.json())
+    .then(renderBookCards)
+
+function renderBookCards(//what to put for array here?//)
