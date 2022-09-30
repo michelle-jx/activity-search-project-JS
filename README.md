@@ -15,6 +15,8 @@ Our project aims to let users search for books using a group of different criter
 We'll be using the Open Library API as a database to pull from.  
 
 Features we'd like to include:
--allows users to search with a variety of queries
+-allows users to search with a variety of queries 
 -renders each book as a card, displaying details such as author, genre, and cover image (click event)
 -users can leave comments and ratings for each book (submit event)
+
+Outline for web page: ![Outline for web page](screen_shot_2022-09-30_at_10.51.49_am.png)
