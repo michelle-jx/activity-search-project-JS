@@ -1,25 +1,54 @@
 <!DOCTYPE html>
-<lang="en"></lang>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Beer Searcher</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script defer type="text/javascript" src="index.js"></script>
 
-<head>
-    <title>Library Search Engine</title>
-</head>
+  </head>
+  <body>
+  <div id="formArea">
+    <form id="search">
+      <div class="form-div">
+        <label for="title">Title Search:</label><br>
+        <input type="text" id="title" name="title" placeholder="Enter Title"><br>
+      </div>
+      <div class="form-div">
+        <label for="author">Author Search:</label><br>
+        <input type="text" id="author" name="author" placeholder="Enter Author"><br>
+      </div> 
+      <div class="form-div"> 
+        <label for="genre">Genre Search:</label><br>
+        <input type="text" id="genre" name="genre" placeholder="Enter Genre"><br>
+      </div>
+      <input class="submit-button" type="submit" value="Submit">
+    </form>
+    <button id="reset">Reset</button>
+  </div>
 
-<body>
-    <div class="logo"></div>
-    <h1>Library Search Engine</h1>
-</body>
-
-<div id="book-collection"></div>
-
-<div class="book-info">
-    <div id="book-details">
-        <p id="title">Book Title</p>
-        <img id="cover-image" src="" alt="Book Cover">
-        <h4>Rating</h4>
-        <form id="add-comment">
-            <input type="text" placeholder="Add your comment here" id="comments" name="comments">
-            <input type="submit" value="Rate the book here">
+  <div id="Main-Book" class="Main-Card">
+    <img src="https://www.roffeypark.ac.uk/wp-content/uploads/2018/06/the-7-best-books-to-improve-influencing-skills-2-scaled.jpg">
+    <!-- <iframe src="https://www.roffeypark.ac.uk/wp-content/uploads/2018/06/the-7-best-books-to-improve-influencing-skills-2-scaled.jpg"></iframe> -->
+    <div class="main-Container">
+        <h4 id="book-title"><b>Book Title</b></h4>
+        <p id="book-author">Book Author</p>
+        <p id="book-genre">Genre of Book</p>
+        <a id="url">URL</a>
+        <p id="book-comments">Comments</p>
+        <form class="comment-form">
+          <input type="text" id="comments" name="comments" placeholder="Comments"><br>
+          <input class="submit-button" type="submit" value="Submit">
         </form>
     </div>
-</div>
+  </div>
+
+  <div id="main-div">
+  </div>
+
+  <div id="buttonArea">
+    <button id="previous">Previous Page</button>
+    <button id="next">Next Page</button>
+  </div>
+  </body>
