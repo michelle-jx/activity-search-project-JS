@@ -1,18 +1,8 @@
-const url = 'https://www.boredapi.com/api/';
+const url = 'https://localhost:3000/';
 
-fetch(url)
-.then((res) => res.json())
-.then(renderMysteryCards)
-
-mysteryCard = {
-    name: 
-    type:
-    participants:
-    price:
-    link:
-    key:
-    accessibility:
-}
+fetch(url);
+    .then((res) => res.json())
+    .then(renderMysteryCards)
 
 function renderMysteryCards(mysteryCards) {
     mysteryCards.forEach(mysteryCard)
