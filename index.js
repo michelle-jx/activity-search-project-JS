@@ -24,7 +24,15 @@ const makeMysteryCard(mysteryCard) {
     const accessibilityNum = document.createElement()
     const activityType = document.createElement()
     const participantNum = document.createElement()
-    const activityPrice = docuemnt.createElement()
+    const activityPrice = document.createElement()
     const activityLink = document.createElement()
     const activityKey = document.createElement()
+
+    mysteryCard.className = 'card'
+    activityName.textContent = mysteryCard.activity;
+    accessibilityNum.textContent = mysteryCard.accessibility;
+    activityType.textContent = mysteryCard.type;
+    participantNum.textContent = mysteryCard.participants;
+
+    mysteryCard.append(activity, accessibility, type, participants, price, link, key)
 }
