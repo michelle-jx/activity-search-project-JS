@@ -1,61 +1,66 @@
 body {
   margin: 10px;
-  font-family: monospace;
-  background-color: #323e49;
-
+  background-color: lightslategray;
   display: grid;
   grid-template-columns: 30vw 70vw;
-  grid-template-rows: 40vh 50vh 10vh; 
+  grid-template-rows: 40vh 50vh 10vh;
 }
-
-/* Form Styling*/
-#formArea{
+/*form styling*/
+#formArea {
   grid-column: 1;
   grid-row: 1;
 }
-
 .form-div {
-margin-bottom: 10px;
-color: #ffffff;
-margin-left: 20px; 
+  margin-bottom: 10px;
+  color: white;
+  margin-left: 20px;
 }
-
-input[type=submit]{
-margin-top: 5px;
-margin-left: 20px;
-margin-bottom: 5px;
+input[type=submit] {
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-bottom: 5px;
 }
-
-input[type=text] {
-margin-top: 8px;
-padding: 12px 60px;
-border: grey solid 1px;
-box-shadow: 2px 3px lightgreen;
-border-radius: 5px;
-background: #434343;
-color: #ffffff;
-}
-
-.comment-form input[type=text]{
-padding: 12px 30px;
-margin-bottom: 5px;
-}
-
-
-input[type=text]::placeholder{
-font-family: monospace;
-}
-
 #reset {
-margin-left: 20px;
-}
+   margin-left: 20px;
+ }
 
-/* Styling for Main Div which holds Beer Cards*/
+ /*dropdown button*/
+ .dropbtn {
+   background-color: lightcyan;
+   color: white;
+   padding: 16px;
+   font-size: 16px;
+   border: none;
+ }
 
-#main-div {
-  grid-column: 2;
-  grid-row: 1 / span 2;
+ /*div to contain dropdown content*/
+ .dropdown {
+   position: relative;
+   display: inline-block;
+ }
 
+ /*dropdown content (hidden by default)*/
+ .dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #f1f1f1;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+ }
+
+ /*links inside dropdown*/
+ .dropdown-content a {
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+ }
+
+ /*styling main div*/
+ #main-div {
+   grid-column: 2;
+  grid-row: 1 / span: 2;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -63,174 +68,10 @@ margin-left: 20px;
   height: 90vh;
   row-gap: 0px;
   column-gap: 0px;
-}
+ }
 
-.beer-card {
-text-align: center;
-border: grey solid 1px;
-padding: 0.7rem;
-margin: 1rem 2rem;
-width: 10vw;
-height: 10vw;
-box-shadow: 3px 4px lightgreen;
-border-radius: 25px;
-background: #434343;
-color: #ffffff;
-cursor: pointer;
-/* display: inline-block;
-height: auto; */
-overflow: auto;
-}
 
-.beer-card h2{
-font-size: clamp(0.65rem, 0.4000rem + 0.7555vw, 1.25rem);
-
-padding: 4%;
-margin: 0%;
-height: 40%;
-overflow: auto;
-}
-
-.beer-card p{
-font-size: clamp(0.5rem, 0.3333rem + 0.5556vw, 1rem);
-
-padding: 0%;
-margin: 0%;
-height: 30%;
-}
-
-#star-form{
-height: 20%;
-}
-
-.beer-card:hover{
-box-shadow: 5px 6px lightgreen;
-}
-
-/* Styling for the main card which appears on the bottom left of screen*/
-
-.Main-Card {
-grid-row: 2;
-grid-column: 1;
-
-text-align: center;
-border: grey solid 1px;
-padding: 1rem;
-margin: 1rem 2rem;
-box-shadow: 3px 4px lightgreen;
-border-radius: 25px;
-background: #434343;
-color: #ffffff;
-
-/* any over flowing text is placed within the contain .Main-Card*/
-overflow: auto;
-}
-
-.main-Container{
-padding: 2px 10px;
-border: lightgreen 1px;
-}
-
-.main-Container h4{
-font-size: clamp(0.75rem, 0.5000rem + 0.8333vw, 1.5rem);
-
-padding: 2%;
-margin: 2%;
-}
-
-.main-Container p{
-font-size: clamp(0.5rem, 0.3333rem + 0.5556vw, 1rem);
-
-padding: 0.5%;
-margin: 0.5%;
-}
-
-.Main-Card img {
-border: 5px solid white;
-width: 80%;
-margin: 1% 5% 1%;
-padding: 1% 5% 1%;
-}
-
-/*Styling for each button*/
-#buttonArea{
-grid-column: 2;
-grid-row: 3;
-
-display: grid;
-grid-template-columns: 35vw 35vw;
-}
-
-#next, #previous, .submit-button, #reset{
-  height: 38px;
-  padding: 0 30px;
-  color: #fff;
-  text-align: center;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 38px;
-  letter-spacing: .1rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  white-space: nowrap;
-  background-color: transparent;
-  border-radius: 4px;
-  border: 1px solid #bbb;
-  cursor: pointer;
-  box-sizing: border-box;
-
-  opacity: 0.5;
-  font-family: inherit;
-}
-
-#next:hover, #previous:hover, .submit-button:hover, #reset:hover{
-  opacity: 1;
-}
-
-#next{
-  grid-column: 2;
-  justify-self: center;
-}
-
-#previous{
-  grid-column: 1;
-  justify-self: center;
-}
-
-/* Other Styling for links and hidden class*/
-.hidden {
-  display: none;
-}
-
-a:link {
-  color: lightgreen;
-}
-
-a:visited {
-  color: darkblue;
-}
-
-/* Styling for the stars*/
-.star{
-  opacity: 50%;
-}
-
-.star:hover{
-  opacity: 100%;
-}
-
-/* .star:hover ~ a{
-  opacity: 50%;
-}  */
-
-/* .starContainer:hover a{
-  opacity: 100%;
-} */
-
-body .active{
-  opacity: 100%;
-}
-
-body .disable{
-  pointer-events: none;
-}
+ /*need to show details only when clicke*/
+ .book-card {
+ /*need to show details only when clicked*/
+ .activity-card {
