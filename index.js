@@ -19,7 +19,7 @@ let parameter = ""
 // Function to Clear Page and Reload Original Books
 function clearPage(){
     pageReset()
-    fetch (`https://openlibrary.org/dev/docs/api/search`)
+    fetch (`https://openlibrary.org/books`)
     .then(res => res.json())
     .then(data => {
         data.forEach(bookBuilder)
@@ -74,15 +74,15 @@ search.addEventListener('submit', (e) => {
     pageReset()
     pageNumber = 1
 
-    let state = e.target.state.value
-    let city = e.target.city.value
-    let zipcode = e.target.zipcode.value
+    let author = e.target.author.value
+    let title = e.target.title.value
+    let genre = e.target.genre.value
 
-    stateSearchParameter = `by_state=${state}`
-    citySearchParameter = `by_city=${city}`
-    zipcodeSearchParameter = `by_postal=${zipcode}`
+    authorSearchParameter = `by_state=${state}`
+    titleSearchParameter = `by_city=${city}`
+    genreSearchParameter = `by_postal=${zipcode}`
 
-    parameter = `${stateSearchParameter}&${citySearchParameter}&${zipcodeSearchParameter}&`
+    parameter = `${authorSearchParameter}&${titleSearchParameter}&${genreSearchParameter}&`
 
     fetch(`https://api.openbrewerydb.org/breweries?${parameter}page=1&per_page=12`)
     .then(res => res.json())
